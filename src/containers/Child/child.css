@@ -1,0 +1,34 @@
+.child-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.table {
+  padding: 20px;
+  border: 1px solid #dbdfdb;
+  border-radius: 4px;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.table-row-1 {
+  color: grey;
+}
+
+.table-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  align-items: center;
+  border-bottom: 1px solid #dbdfdb;
+  margin-bottom: 10px;
+}
+
+#add-child {
+  background: green;
+  color: white;
+  margin: 20px;
+  align-self: auto;
+  width: 13%;
+  padding: 7px 0;
+}

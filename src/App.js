@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Route, Switch, BrowserRouter } from "react-router-dom";
+import  { Login }  from "./containers/Login/Login";
+import React, { Component } from "react";
+import Header from "./components/Header/Header";
+import State from "./containers/State/State";
+import Home from "./containers/Home/Home";
+import District from "./containers/District/District";
+import Child from "./containers/Child/Child";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export class App extends Component {
+  render() {
+    return (
+      <BrowserRouter>
+        <Header />
+        <Switch>
+          <Route exact path="/" component={Login} />
+          <Route path="/home" component={Home} />
+          <Route exact path="/state" component={State} />
+          <Route exact path="/district" component={District} />
+          <Route exact path="/child" component={Child} />
+        </Switch>
+      </BrowserRouter>
+    );
+  }
 }
 
 export default App;
